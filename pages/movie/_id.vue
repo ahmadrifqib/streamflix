@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div class="antialiased">
+    <NavigationBar />
+    <div class="container"></div>
+  </div>
 </template>
 
 <script>

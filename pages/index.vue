@@ -14,7 +14,7 @@
               style="list-style-type: none"
               class="col p-4"
             >
-              <a :href="item.id" class="card" style="width: 18rem">
+              <a :href="'/movie/' + item.id" class="card" style="width: 18rem">
                 <img :src="item.imageUrl" class="card-img-top" />
                 <div class="card-body">
                   <h5 class="card-title">{{ item.title }}</h5>
@@ -67,6 +67,7 @@ export default Vue.extend({
       currentPage: 1,
       movieResponse: [
         {
+          id: 0,
           title: "",
           overview: "",
           vote_average: -1,
@@ -115,6 +116,7 @@ export default Vue.extend({
           }
 
           return {
+            id: i.id,
             title: i.title,
             overview: i.overview,
             vote_average: i.vote_average,
